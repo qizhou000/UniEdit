@@ -1,7 +1,7 @@
 # UniEdit: A Unified Knowledge Editing Benchmark for Large Language Models
-![](figs\fig_UniEdit_dataset_design.svg)
+![](figs/fig_UniEdit_dataset_design.svg)
 **Figure 1**: Data Composition of UniEdit.
-![](figs\fig_uniedit_data_construction.svg)
+![](figs/fig_uniedit_data_construction.svg)
 **Figure 2**: Data Construction of UniEdit.
 
 ## UniEdit Construction
