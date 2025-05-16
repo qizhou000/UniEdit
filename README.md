@@ -1,9 +1,11 @@
-# UniEdit Construction
+# UniEdit
+
+## UniEdit Construction
 Please refer to the `./kits/uniedit/preprocess_pipeline` folder for the construction pipeline and toolkit of UniEdit.  
 We use ElasticSearch to retrieve entities, which should be downloaded and placed in `./elasticsearch`.  
 For scripts used in certain steps, please refer to `./scripts/wikidata_gen`.
 
-# UniEdit Evaluation
+## UniEdit Evaluation
 1. Please download the UniEdit data and place it in the `data` folder with the following structure:
 - data
     - UniEdit
