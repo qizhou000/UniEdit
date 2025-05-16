@@ -1,0 +1,5 @@
+edit_model_name: "gpt2-xl"
+begin_layer_path: "transformer.h.0"
+lm_head_path: "lm_head"
+max_demonstration_n: 32
+max_demo_tokens: 400

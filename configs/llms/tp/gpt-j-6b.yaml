@@ -1,0 +1,11 @@
+edit_model_name: "gpt-j-6b"
+edit_layer: 27
+num_steps: 75
+lr: 1.e-2
+loss_a_lambda: 1.e-1
+loss_m_lambda: 1.e-1
+weight_decay: 0
+mlp_in_module_tmps: 
+- "transformer.h.{}.mlp.fc_in"
+mlp_out_module_tmps: 
+- "transformer.h.{}.mlp.fc_out"

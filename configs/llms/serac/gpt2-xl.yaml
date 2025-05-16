@@ -1,0 +1,15 @@
+edit_model_name: "gpt2-xl"
+counterfact_model_path: "models/opt-125m"
+counterfact_model_rep_dim: 768
+classifier_path: "models/multi-qa-mpnet-base-dot-v1"
+classifier_rep_dim: 768
+llm_hidden_size: 1600
+llm_norm_path: "transformer.ln_f"
+llm_voc_path: "lm_head"
+# train_classifier: true
+train_classifier: false
+train_config:
+  lr: 1.e-4
+  relia_lambda: 1
+  gen_lambda: 1
+  loc_lambda: 1

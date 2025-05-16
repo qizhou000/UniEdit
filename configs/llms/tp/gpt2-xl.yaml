@@ -1,0 +1,11 @@
+edit_model_name: "gpt2-xl"
+edit_layer: 47
+num_steps: 75
+lr: 1.e-2
+loss_a_lambda: 1.e-1
+loss_m_lambda: 1.e-1
+weight_decay: 0
+mlp_in_module_tmps: 
+- "transformer.h.{}.mlp.c_fc"
+mlp_out_module_tmps: 
+- "transformer.h.{}.mlp.c_proj"
