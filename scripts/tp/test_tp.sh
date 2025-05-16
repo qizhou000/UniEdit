@@ -28,7 +28,7 @@
 # python test_editor.py -et llm -en tp -mn gpt2-xl -sen 1 -dvc "cuda:1" -ckpt none -dn UniEdit -dsn 2000 -rs 16 > jobs/nohup/test-tp-gpt2-xl-UniEdit-1.log 2>&1 &
 
 # python test_editor.py -et llm -en tp -mn gpt-j -sen 1 -dvc "cuda:2" -ckpt none -dn UniEdit -dsn 2000 -rs 8 > jobs/nohup/test-tp-gpt-j-UniEdit-1.log 2>&1 &
-python test_editor.py -et llm -en tp -mn gpt-j -sen 1 -dvc "cuda:0" -ckpt none -dn UniEdit -dsn 2000 -rs 16 > jobs/nohup/test-tp-gpt-j-UniEdit-1.log 2>&1 &
+# python test_editor.py -et llm -en tp -mn gpt-j -sen 1 -dvc "cuda:0" -ckpt none -dn UniEdit -dsn 2000 -rs 16 > jobs/nohup/test-tp-gpt-j-UniEdit-1.log 2>&1 &
 
 # python test_editor.py -et llm -en tp -mn llama-3-8b -sen 1 -dvc "cuda:0" -ckpt none -dn UniEdit -dsn 2000 -rs 8 > jobs/nohup/test-tp-llama-3-8b-UniEdit-1.log 2>&1 &
-python test_editor.py -et llm -en tp -mn llama-3-8b -sen 1 -dvc "cuda:0" -ckpt none -dn UniEdit -dsn 2000 -rs 16 > jobs/nohup/test-tp-llama-3-8b-UniEdit-1.log 2>&1 &
+# python test_editor.py -et llm -en tp -mn llama-3-8b -sen 1 -dvc "cuda:0" -ckpt none -dn UniEdit -dsn 2000 -rs 16 > jobs/nohup/test-tp-llama-3-8b-UniEdit-1.log 2>&1 &
