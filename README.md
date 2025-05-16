@@ -22,7 +22,7 @@ For scripts used in certain steps, please refer to `./scripts/wikidata_gen`.
             - art.json
             - ...
 
-**2.** Download the backbones and place them in the `./models` folder. The URLs are:
+**2.** Download the backbones and place them in the `./models` folder. The model URLs are:
 
 - GPT2-XL-1.5B: https://huggingface.co/openai-community/gpt2-xl  
 - GPT-J-6B: https://huggingface.co/EleutherAI/gpt-j-6b  
