@@ -22,6 +22,14 @@ For scripts used in certain steps, please refer to `./scripts/wikidata_gen`.
             - art.json
             - ...
 
+To check which criteria each sample belongs to, you can run the following Python script:
+```
+from dataset.llm import UniEdit
+
+data = UniEdit('data/UniEdit/test')
+print(data.get_data_by_ids([0]))
+```
+
 **2.** Download the backbones and place them in the `./models` folder. The model URLs are:
 
 - GPT2-XL-1.5B: https://huggingface.co/openai-community/gpt2-xl  
