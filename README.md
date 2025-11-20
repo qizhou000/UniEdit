@@ -1,8 +1,6 @@
+
 <div align="center">
-  <img src="figs/readme/head.svg" width="100%">
-</div>
-<div align="center">
-  <img src="figs/readme/logo.svg" width="30%">
+  <img src="figs/readme/logo.svg" width="25%">
 </div>
 <!-- # <div align="center" style="font-variant: small-caps;">UniEdit</div> -->
 <!-- : A Unified Knowledge Editing Benchmark for Large Language Models -->
@@ -14,6 +12,7 @@
   <a href="https://arxiv.org/abs/2505.12345"><img src="https://img.shields.io/badge/URL-Paper-red" /></a>
   <a href="https://huggingface.co/datasets/qizhou/UniEdit"><img src="https://img.shields.io/badge/URL-Data-red" /></a>
   <img src="https://img.shields.io/badge/PRs-Welcome-yellow" />
+  <img src="figs/readme/head.svg" width="100%">
 </div>
 
 ---
