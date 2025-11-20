@@ -92,7 +92,7 @@ You can download the UniEdit dataset from HuggingFace ([here](https://huggingfac
     └── ...
 ```
 Each knowledge domain corresponds to a single JSON file in the training or test set. The data structure of each JSON file is as follows:
-```diff
+```python
 {
     "<sample_id>": {
         "edit": {
