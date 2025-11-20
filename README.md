@@ -1,11 +1,20 @@
 ![](figs/readme/head.svg)
 # <span style="font-variant: small-caps;">UniEdit</span>: A Unified Knowledge Editing Benchmark for Large Language Models
 
-![](https://img.shields.io/badge/Version-v1.0.0-blue)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Paper](https://img.shields.io/badge/URL-Paper-red)](https://arxiv.org/abs/2505.12345)
-[![Data Download](https://img.shields.io/badge/URL-Data-red)](https://huggingface.co/datasets/qizhou/UniEdit)
-![](https://img.shields.io/badge/PRs-Welcome-yellow)
+<p align="center">
+  <img src="https://img.shields.io/badge/Version-v1.0.0-blue" />
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-green.svg" />
+  </a>
+  <a href="https://arxiv.org/abs/2505.12345">
+    <img src="https://img.shields.io/badge/URL-Paper-red" />
+  </a>
+  <a href="https://huggingface.co/datasets/qizhou/UniEdit">
+    <img src="https://img.shields.io/badge/URL-Data-red" />
+  </a>
+  <img src="https://img.shields.io/badge/PRs-Welcome-yellow" />
+</p>
+
 
 UniEdit is a large-scale open-domain benchmark for large language model knowledge editing, containing 311K samples. It is designed to systematically and fine-grainedly evaluate editing algorithms across three key dimensions: Reliability, Generality, and Locality.
 
