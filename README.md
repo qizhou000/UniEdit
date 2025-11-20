@@ -165,9 +165,9 @@ Each knowledge domain corresponds to a single JSON file in the training or test 
 }
 ```
 
-Place the UniEdit data in the ./data folder. 
+Place the UniEdit data in the `./data` folder. 
 To check which criteria each sample belongs to, you can run:
-```
+```python
 from dataset.llm import UniEdit
 
 i = 0
