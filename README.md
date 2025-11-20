@@ -23,12 +23,18 @@ To overcome the limitations of existing benchmarks—such as narrow knowledge co
 
 The figure below presents a data composition example, which generates corresponding natural-language editing and evaluation samples from sampled structured fact chains.
 
-![](figs/readme/fig_UniEdit_dataset_design.svg)
+
+<div align="center">
+  <img src="figs/readme/fig_UniEdit_dataset_design.svg" width="100%">
+</div>
 
 
 UniEdit introduces the NMCS (Neighborhood Multi-hop Chain Sampling) algorithm, a unified sampling method that generates diverse structural samples for generality and locality based on a given factual triple. This  expands the coverage of existing evaluation criteria. We use Deepseek-V3 to automatically convert the structured data into natural-language form. The figure below illustrates the full generation pipeline of UniEdit.
 
-![](figs/readme/fig_uniedit_data_construction.svg)
+
+<div align="center">
+  <img src="figs/readme/fig_uniedit_data_construction.svg" width="100%">
+</div>
 
 
 # Statistics
