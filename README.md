@@ -1,7 +1,7 @@
 ![](figs/readme/head.svg)
 # <span style="font-variant: small-caps;">UniEdit</span>: A Unified Knowledge Editing Benchmark for Large Language Models
 
-<p align="center">
+<div align="center">
   <img src="https://img.shields.io/badge/Version-v1.0.0-blue" />
   <a href="https://opensource.org/licenses/MIT">
     <img src="https://img.shields.io/badge/License-MIT-green.svg" />
@@ -13,8 +13,9 @@
     <img src="https://img.shields.io/badge/URL-Data-red" />
   </a>
   <img src="https://img.shields.io/badge/PRs-Welcome-yellow" />
-</p>
+</div>
 
+---
 
 UniEdit is a large-scale open-domain benchmark for large language model knowledge editing, containing 311K samples. It is designed to systematically and fine-grainedly evaluate editing algorithms across three key dimensions: Reliability, Generality, and Locality.
 
@@ -33,25 +34,33 @@ UniEdit introduces the NMCS (Neighborhood Multi-hop Chain Sampling) algorithm, a
 # Statistics
 The table below compares UniEdit with existing benchmarks in terms of coverage across various evaluation features, including Rephrase (Rep), Multi-Hop (MH), Relation Reversal (RR), Same-Entity Reasoning (SER), Subject Alias (SA), Object Alias (OA), Subject Specificity (SS), Relation Specificity (RS), Object Specificity (OS), 1-N Forgotten (1-NF), Combinations of the above evaluation Criteria (CC), and Open-Domain (OD). 
 
-![](figs/readme/compare_benchmarks.svg)
+<div align="center">
+  <img src="figs/readme/compare_benchmarks.svg" width="85%">
+</div>
 
 The figure below shows the data distribution of UniEdit across: (a) domains, (b) multi-hop counts and query chain structures (G., L., S., and D. represent generality, locality, single, and double, respectively), and (d, e) the top 15 combinations of recognized evaluation criteria. (c) displays the frequency statistics of nouns in entity descriptions. 
 
-![](figs/readme/uniedit_statistics.svg)
+
+<div align="center">
+  <img src="figs/readme/uniedit_statistics.svg" width="85%">
+</div>
 
 The figure below shows the word cloud distribution of the head-entity descriptions for editing samples across different domains in UniEdit.
 
-![](figs/readme/word_cloud.svg)
+
+<div align="center">
+  <img src="figs/readme/word_cloud.svg" width="85%">
+</div>
 
 # Installation
 Please use Python 3.11.9 to get started with our implementation; simply install Conda and run:
-
+```bash
 git clone https://github.com/qizhou000/UniEdit.git
 cd UniEdit
 conda create -n UniEdit python=3.11.9
 conda activate UniEdit
 pip install -r requirements.txt
-
+```
 
 # Generation of <span style="font-variant: small-caps;">UniEdit</span>
 ## Download and Start Elasticsearch Backend
