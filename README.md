@@ -21,6 +21,7 @@
 # Catalogue
 - [Catalogue](#catalogue)
 - [Introduction](#introduction)
+- [Statistics of UniEdit](#statistics-of-uniedit)
 - [Installation](#installation)
 - [Generation of UniEdit](#generation-of-uniedit)
   - [Download and Start Elasticsearch Backend](#download-and-start-elasticsearch-backend)
@@ -28,8 +29,7 @@
 - [Evaluation with UniEdit](#evaluation-with-uniedit)
   - [Download UniEdit](#download-uniedit)
   - [Prepare Backbones](#prepare-backbones)
-  - [Training \& Evaluation](#training--evaluation)
-- [Statistics of UniEdit](#statistics-of-uniedit)
+  - [Training \& Testing](#training--testing)
 - [Citation](#citation)
 
 # Introduction
@@ -51,6 +51,29 @@ UniEdit introduces the NMCS (Neighborhood Multi-hop Chain Sampling) algorithm, a
 <div align="center">
   <img src="figs/readme/fig_uniedit_data_construction.svg" width="100%">
 </div>
+
+
+# Statistics of UniEdit
+The table below compares UniEdit with existing benchmarks in terms of coverage across various evaluation features, including Rephrase (Rep), Multi-Hop (MH), Relation Reversal (RR), Same-Entity Reasoning (SER), Subject Alias (SA), Object Alias (OA), Subject Specificity (SS), Relation Specificity (RS), Object Specificity (OS), 1-N Forgotten (1-NF), Combinations of the above evaluation Criteria (CC), and Open-Domain (OD). 
+
+<div align="center">
+  <img src="figs/readme/compare_benchmarks.svg" width="85%">
+</div>
+
+The figure below shows the data distribution of UniEdit across: (a) domains, (b) multi-hop counts and query chain structures (G., L., S., and D. represent generality, locality, single, and double, respectively), and (d, e) the top 15 combinations of recognized evaluation criteria. (c) displays the frequency statistics of nouns in entity descriptions. 
+
+
+<div align="center">
+  <img src="figs/readme/uniedit_statistics.svg" width="85%">
+</div>
+
+The figure below shows the word cloud distribution of the head-entity descriptions for editing samples across different domains in UniEdit.
+
+
+<div align="center">
+  <img src="figs/readme/word_cloud.svg" width="85%">
+</div>
+
 
 
 # Installation
@@ -183,34 +206,13 @@ The model URLs are:
 - GPT-J-6B: https://huggingface.co/EleutherAI/gpt-j-6b
 - LLaMa-3.1-8B: https://huggingface.co/meta-llama/Llama-3.1-8B
 
-## Training & Evaluation
+## Training & Testing
 For scripts related to editor training and testing on UniEdit, please refer to `./scripts/editor_train_test`.
 
-Evaluation results will be saved in the `./eval_results` directory.
+Testing results will be saved in the `./eval_results` directory.
 
-For visualization of the evaluation results reported in the paper, please refer to the scripts `./fig_heat_map_discipline_results.py` `./fig_radar_eval_pattern_results.py`, and `./fig_serac_domain_generalization.py`. 
+For visualization of the results reported in the paper, please refer to the scripts `./fig_heat_map_discipline_results.py` `./fig_radar_eval_pattern_results.py`, and `./fig_serac_domain_generalization.py`. 
 The Figures are saved in `./figs/uniedit`.
-
-# Statistics of UniEdit
-The table below compares UniEdit with existing benchmarks in terms of coverage across various evaluation features, including Rephrase (Rep), Multi-Hop (MH), Relation Reversal (RR), Same-Entity Reasoning (SER), Subject Alias (SA), Object Alias (OA), Subject Specificity (SS), Relation Specificity (RS), Object Specificity (OS), 1-N Forgotten (1-NF), Combinations of the above evaluation Criteria (CC), and Open-Domain (OD). 
-
-<div align="center">
-  <img src="figs/readme/compare_benchmarks.svg" width="85%">
-</div>
-
-The figure below shows the data distribution of UniEdit across: (a) domains, (b) multi-hop counts and query chain structures (G., L., S., and D. represent generality, locality, single, and double, respectively), and (d, e) the top 15 combinations of recognized evaluation criteria. (c) displays the frequency statistics of nouns in entity descriptions. 
-
-
-<div align="center">
-  <img src="figs/readme/uniedit_statistics.svg" width="85%">
-</div>
-
-The figure below shows the word cloud distribution of the head-entity descriptions for editing samples across different domains in UniEdit.
-
-
-<div align="center">
-  <img src="figs/readme/word_cloud.svg" width="85%">
-</div>
 
 
 # Citation
