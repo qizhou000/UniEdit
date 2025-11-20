@@ -15,7 +15,6 @@
   <img src="figs/readme/head.svg" width="100%">
 </div>
 
----
 
 # Catalogue
 - [Catalogue](#catalogue)
