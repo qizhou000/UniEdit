@@ -1,5 +1,5 @@
 #%%
-from utils import get_full_model_name, load_llm_editor, load_vllm_editor
+from utils import get_full_model_name, load_llm_editor
 from evaluation.llm_editor_eval import LLMEditorEvaluation
 from utils.GLOBAL import ROOT_PATH
 import os, argparse, sys
