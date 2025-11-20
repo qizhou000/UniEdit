@@ -1,5 +1,12 @@
-![](figs/readme/head.svg)
-# <span style="font-variant: small-caps;">UniEdit</span>: A Unified Knowledge Editing Benchmark for Large Language Models
+<div align="center">
+  <img src="figs/readme/head.svg" width="100%">
+</div>
+<div align="center">
+  <img src="figs/readme/logo.svg" width="40%">
+</div>
+<!-- # <div align="center" style="font-variant: small-caps;">UniEdit</div> -->
+<!-- : A Unified Knowledge Editing Benchmark for Large Language Models -->
+
 
 <div align="center">
   <img src="https://img.shields.io/badge/Version-v1.0.0-blue" />
@@ -8,6 +15,7 @@
   <a href="https://huggingface.co/datasets/qizhou/UniEdit"><img src="https://img.shields.io/badge/URL-Data-red" /></a>
   <img src="https://img.shields.io/badge/PRs-Welcome-yellow" />
 </div>
+
 
 
 UniEdit is a large-scale open-domain benchmark for large language model knowledge editing, containing 311K samples. It is designed to systematically and fine-grainedly evaluate editing algorithms across three key dimensions: Reliability, Generality, and Locality.
@@ -29,27 +37,6 @@ UniEdit introduces the NMCS (Neighborhood Multi-hop Chain Sampling) algorithm, a
   <img src="figs/readme/fig_uniedit_data_construction.svg" width="100%">
 </div>
 
-
-# Statistics
-The table below compares UniEdit with existing benchmarks in terms of coverage across various evaluation features, including Rephrase (Rep), Multi-Hop (MH), Relation Reversal (RR), Same-Entity Reasoning (SER), Subject Alias (SA), Object Alias (OA), Subject Specificity (SS), Relation Specificity (RS), Object Specificity (OS), 1-N Forgotten (1-NF), Combinations of the above evaluation Criteria (CC), and Open-Domain (OD). 
-
-<div align="center">
-  <img src="figs/readme/compare_benchmarks.svg" width="85%">
-</div>
-
-The figure below shows the data distribution of UniEdit across: (a) domains, (b) multi-hop counts and query chain structures (G., L., S., and D. represent generality, locality, single, and double, respectively), and (d, e) the top 15 combinations of recognized evaluation criteria. (c) displays the frequency statistics of nouns in entity descriptions. 
-
-
-<div align="center">
-  <img src="figs/readme/uniedit_statistics.svg" width="85%">
-</div>
-
-The figure below shows the word cloud distribution of the head-entity descriptions for editing samples across different domains in UniEdit.
-
-
-<div align="center">
-  <img src="figs/readme/word_cloud.svg" width="85%">
-</div>
 
 # Installation
 Please use Python 3.11.9 to get started with our implementation; simply install Conda and run:
@@ -188,6 +175,28 @@ Evaluation results will be saved in the `./eval_results` directory.
 
 For visualization of the evaluation results reported in the paper, please refer to the scripts `./fig_heat_map_discipline_results.py` `./fig_radar_eval_pattern_results.py`, and `./fig_serac_domain_generalization.py`. 
 The Figures are saved in `./figs/uniedit`.
+
+# Statistics
+The table below compares UniEdit with existing benchmarks in terms of coverage across various evaluation features, including Rephrase (Rep), Multi-Hop (MH), Relation Reversal (RR), Same-Entity Reasoning (SER), Subject Alias (SA), Object Alias (OA), Subject Specificity (SS), Relation Specificity (RS), Object Specificity (OS), 1-N Forgotten (1-NF), Combinations of the above evaluation Criteria (CC), and Open-Domain (OD). 
+
+<div align="center">
+  <img src="figs/readme/compare_benchmarks.svg" width="85%">
+</div>
+
+The figure below shows the data distribution of UniEdit across: (a) domains, (b) multi-hop counts and query chain structures (G., L., S., and D. represent generality, locality, single, and double, respectively), and (d, e) the top 15 combinations of recognized evaluation criteria. (c) displays the frequency statistics of nouns in entity descriptions. 
+
+
+<div align="center">
+  <img src="figs/readme/uniedit_statistics.svg" width="85%">
+</div>
+
+The figure below shows the word cloud distribution of the head-entity descriptions for editing samples across different domains in UniEdit.
+
+
+<div align="center">
+  <img src="figs/readme/word_cloud.svg" width="85%">
+</div>
+
 
 # Results
 
