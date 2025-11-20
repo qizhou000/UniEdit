@@ -95,66 +95,66 @@ Each knowledge domain corresponds to a single JSON file in the training or test 
 {
     "<sample_id>": {
         "edit": {
-            "prompt": str, // prompt string
-            "target": str, // target string
-            "subject": str, // subject string
-            "head_entity": { // properties of the head entity
+            "prompt": str, # prompt string
+            "target": str, # target string
+            "subject": str, # subject string
+            "head_entity": { # properties of the head entity
                 "id": str, "label": str,
                 "description": str, "aliases": list[str]
             },
-            "property": { // properties of the relation
+            "property": { # properties of the relation
                 "id": str, "label": str,
                 "description": str, "aliases": list[str],
-                "single_value": bool // whether the head entity and the relation correspond to a single-valued tail
+                "single_value": bool # whether the head entity and the relation correspond to a single-valued tail
             },
-            "tail_entity": { // properties of the tail entity
-                "order_in_property": 0, // the index of this tail entity among all values associated with the head–relation pair
-                "datatype": str, // such as "wikibase-item"(entity), "quantity"(numeric type), etc.
-                "value": dict // structure depends on the datatype
+            "tail_entity": { # properties of the tail entity
+                "order_in_property": 0, # the index of this tail entity among all values associated with the head–relation pair
+                "datatype": str, # such as "wikibase-item"(entity), "quantity"(numeric type), etc.
+                "value": dict # structure depends on the datatype
             },
-            "single_inverse": bool // whether the tail entity and the reversed relation correspond to a single-valued head
+            "single_inverse": bool # whether the tail entity and the reversed relation correspond to a single-valued head
         },
         "generality": {
-            "0": { // only one generality and locality sample is generated for each edit sample
-                "path_type": str, // "single" or "double", indicating single-path multi-hop reasoning or same-entity reasoning
-                "prompt": str, // prompt string
-                "target": str, // target string
-                "paths": list[list[str]], // the encoded multi-hop reasoning chains. For example,
-                                          // [["t_e", "r_e", "h_e", "b", "m"]] represents a chain containing only one fact: the edit fact itself.
-                                          // Here, "b" means the relation is reversed, i.e. r_e'.
-                                          // "m" indicates that (t_e, r_e', ·) has multiple values.
-                "one_hops": [ // all one-hop facts in the reasoning chain; exists only when `path_type` is "single"
+            "0": { # only one generality and locality sample is generated for each edit sample
+                "path_type": str, # "single" or "double", indicating single-path multi-hop reasoning or same-entity reasoning
+                "prompt": str, # prompt string
+                "target": str, # target string
+                "paths": list[list[str]], # the encoded multi-hop reasoning chains. For example,
+                                          # [["t_e", "r_e", "h_e", "b", "m"]] represents a chain containing only one fact: the edit fact itself.
+                                          # Here, "b" means the relation is reversed, i.e. r_e'.
+                                          # "m" indicates that (t_e, r_e', ·) has multiple values.
+                "one_hops": [ # all one-hop facts in the reasoning chain; exists only when `path_type` is "single"
                     {
-                        "path": list[str], // encoded one-hop fact, e.g., ["e_0", "r_0", "t_e"] meaning a hop linked to the tail of the edit sample
+                        "path": list[str], # encoded one-hop fact, e.g., ["e_0", "r_0", "t_e"] meaning a hop linked to the tail of the edit sample
                         "prompt": str,
                         "subject": str,
                         "target": str,
-                        "reverse_in_multi_hop": bool, // whether this hop is reversed within the chain
-                        "reversed": { // QA for the reversed one-hop fact (only appears if `reverse_in_multi_hop` is True)
+                        "reverse_in_multi_hop": bool, # whether this hop is reversed within the chain
+                        "reversed": { # QA for the reversed one-hop fact (only appears if `reverse_in_multi_hop` is True)
                             "prompt": str,
                             "target": str
                         },
-                        "head_entity": dict, // same structure as defined under "edit"
-                        "property": dict,    // same structure as defined under "edit"
-                        "tail_entity": dict, // same structure as defined under "edit"
-                        "single_inverse": bool // same definition as under "edit"
+                        "head_entity": dict, # same structure as defined under "edit"
+                        "property": dict,    # same structure as defined under "edit"
+                        "tail_entity": dict, # same structure as defined under "edit"
+                        "single_inverse": bool # same definition as under "edit"
                     }, ...
                 ],
-                "single_path1": { // exists only when `path_type` is "double"; facts and prompts of one direction of the reasoning chain
+                "single_path1": { # exists only when `path_type` is "double"; facts and prompts of one direction of the reasoning chain
                     "path_type": "single",
                     "prompt": str,
                     "target": str,
                     "paths": list[list[str]],
                     "one_hops": list[dict]
                 },
-                "single_path2": dict // exists only when `path_type` = "double"; the other direction of the reasoning chain
+                "single_path2": dict # exists only when `path_type` = "double"; the other direction of the reasoning chain
             }
         },
         "locality": {
             "0": {
-                "loc_type": str, // the starting point from which the locality sample is derived: "none", 
-                                 // "tail of edit", "head of edit", or "property of edit"
-                // All fields below follow the same definitions as in "generality"
+                "loc_type": str, # the starting point from which the locality sample is derived: "none", 
+                                 # "tail of edit", "head of edit", or "property of edit"
+                # All fields below follow the same definitions as in "generality"
                 "path_type": str,
                 "prompt": str,
                 ...
