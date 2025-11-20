@@ -16,8 +16,22 @@
   <img src="https://img.shields.io/badge/PRs-Welcome-yellow" />
 </div>
 
+---
 
+# Catalogue
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Generation of UniEdit](#generation-of-uniedit)
+    - [Download and Start Elasticsearch Backend](#download-and-start-elasticsearch-backend)
+    - [Generation Pipeline](#generation-pipeline)
+- [Evaluation with UniEdit](#evaluation-with-uniedit)
+    - [Download UniEdit](#download-uniedit)
+    - [Prepare Backbones](#prepare-backbones)
+    - [Training & Evaluation](#training--evaluation)
+- [Statistics of UniEdit](#statistics-of-uniedit)
+- [Citation](#citation)
 
+# Introduction
 UniEdit is a large-scale open-domain benchmark for large language model knowledge editing, containing 311K samples. It is designed to systematically and fine-grainedly evaluate editing algorithms across three key dimensions: Reliability, Generality, and Locality.
 
 To overcome the limitations of existing benchmarks—such as narrow knowledge coverage, limited structural diversity, and incomplete evaluation criteria—UniEdit is constructed from 29.9M entities in Wikidata, covering 25 domains across five major sectors: natural sciences, humanities, social sciences, applied sciences, and interdisciplinary studies. This provides extensive knowledge coverage and diverse evaluation settings (e.g., multi-hop reasoning, same-entity reasoning, relation reversal, etc.).
@@ -48,7 +62,7 @@ conda activate UniEdit
 pip install -r requirements.txt
 ```
 
-# Generation of <span style="font-variant: small-caps;">UniEdit</span>
+# Generation of UniEdit
 ## Download and Start Elasticsearch Backend
 We use Elasticsearch to retrieve head entities for each domain based on domain-specific keywords.
 To begin, please download Elasticsearch 8.17.2 from: `https://www.elastic.co/downloads/past-releases/elasticsearch-8-17-2`, place the package into the `./elasticsearch` directory, and extract it.
@@ -61,9 +75,9 @@ Then start the Elasticsearch backend:
 The pipeline and toolkit code for UniEdit generation are located in the `./uniedit_construction/preprocess_pipeline` directory.
 Among these steps, pipeline steps 1, 2, 3, 4, 5, 6, and 11 operate on the global data, while the remaining steps process the data independently for each domain. The scripts for these domain-specific steps can be found in the `./scripts/uniedit_gen` directory.
 
-# Evaluation with <span style="font-variant: small-caps;">UniEdit</span>
+# Evaluation with UniEdit
 
-## Download <span style="font-variant: small-caps;">UniEdit</span>
+## Download UniEdit
 You can download the UniEdit dataset from HuggingFace ([here](https://huggingface.co/datasets/qizhou/UniEdit)). The file structure is as follows:
 ```
 📁UniEdit
@@ -176,7 +190,7 @@ Evaluation results will be saved in the `./eval_results` directory.
 For visualization of the evaluation results reported in the paper, please refer to the scripts `./fig_heat_map_discipline_results.py` `./fig_radar_eval_pattern_results.py`, and `./fig_serac_domain_generalization.py`. 
 The Figures are saved in `./figs/uniedit`.
 
-# Statistics
+# Statistics of UniEdit
 The table below compares UniEdit with existing benchmarks in terms of coverage across various evaluation features, including Rephrase (Rep), Multi-Hop (MH), Relation Reversal (RR), Same-Entity Reasoning (SER), Subject Alias (SA), Object Alias (OA), Subject Specificity (SS), Relation Specificity (RS), Object Specificity (OS), 1-N Forgotten (1-NF), Combinations of the above evaluation Criteria (CC), and Open-Domain (OD). 
 
 <div align="center">
@@ -198,7 +212,29 @@ The figure below shows the word cloud distribution of the head-entity descriptio
 </div>
 
 
-# Results
-
-
+# Citation
+If you use UniEdit in your research or projects, please remember to cite our paper :).
+```bibtex
+@article{Chen2025UniEdit,
+  author       = {Qizhou Chen and
+                  Dakan Wang and
+                  Taolin Zhang and
+                  Zaoming Yan and
+                  Chengsong You and
+                  Chengyu Wang and
+                  Xiaofeng He},
+  title        = {UniEdit: {A} Unified Knowledge Editing Benchmark for Large Language
+                  Models},
+  journal      = {CoRR},
+  volume       = {abs/2505.12345},
+  year         = {2025},
+  url          = {https://doi.org/10.48550/arXiv.2505.12345},
+  doi          = {10.48550/ARXIV.2505.12345},
+  eprinttype    = {arXiv},
+  eprint       = {2505.12345},
+  timestamp    = {Tue, 24 Jun 2025 07:37:11 +0200},
+  biburl       = {https://dblp.org/rec/journals/corr/abs-2505-12345.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+```
 
