@@ -19,15 +19,16 @@
 ---
 
 # Catalogue
+- [Catalogue](#catalogue)
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Generation of UniEdit](#generation-of-uniedit)
-    - [Download and Start Elasticsearch Backend](#download-and-start-elasticsearch-backend)
-    - [Generation Pipeline](#generation-pipeline)
+  - [Download and Start Elasticsearch Backend](#download-and-start-elasticsearch-backend)
+  - [Generation Pipeline](#generation-pipeline)
 - [Evaluation with UniEdit](#evaluation-with-uniedit)
-    - [Download UniEdit](#download-uniedit)
-    - [Prepare Backbones](#prepare-backbones)
-    - [Training & Evaluation](#training--evaluation)
+  - [Download UniEdit](#download-uniedit)
+  - [Prepare Backbones](#prepare-backbones)
+  - [Training \& Evaluation](#training--evaluation)
 - [Statistics of UniEdit](#statistics-of-uniedit)
 - [Citation](#citation)
 
@@ -91,7 +92,7 @@ You can download the UniEdit dataset from HuggingFace ([here](https://huggingfac
     └── ...
 ```
 Each knowledge domain corresponds to a single JSON file in the training or test set. The data structure of each JSON file is as follows:
-```python
+```diff
 {
     "<sample_id>": {
         "edit": {
