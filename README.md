@@ -2,7 +2,7 @@
   <img src="figs/readme/head.svg" width="100%">
 </div>
 <div align="center">
-  <img src="figs/readme/logo.svg" width="40%">
+  <img src="figs/readme/logo.svg" width="35%">
 </div>
 <!-- # <div align="center" style="font-variant: small-caps;">UniEdit</div> -->
 <!-- : A Unified Knowledge Editing Benchmark for Large Language Models -->
